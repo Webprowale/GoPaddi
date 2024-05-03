@@ -14,7 +14,7 @@ export default function Liberty() {
             <h3 className="font-bold text-[2rem] mb-2">
               New York City Status of Liberty Super Express Cruise
             </h3>
-            <p className="text-base font-normal mb-5">New York City, USA</p>
+            <p className="text-base font-semibold mb-5">New York City, USA</p>
             <div className="sm:flex">
               <div className="flex-2">
                 <div className="border border-black border-solid sm:p-3 px-6 flex">
