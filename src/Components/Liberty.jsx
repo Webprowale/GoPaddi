@@ -7,14 +7,14 @@ import { GiSelfLove } from "react-icons/gi";
 import { PiCurrencyNgnBold } from "react-icons/pi";
 export default function Liberty() {
   return (
-    <div className="container mt-3 sm:mx-2 py-2 ">
+    <div className="container-fluid mt-3 mx-2 py-2">
       <div className="grid sm:grid-cols-12">
         <div className="col-span-8">
           <div className="flex flex-col">
             <h3 className="font-bold text-[2rem] mb-2">
               New York City Status of Liberty Super Express Cruise
             </h3>
-            <p className="text-base font-semibold mb-5">New York City, USA</p>
+            <p className="text-base font-normal mb-5">New York City, USA</p>
             <div className="sm:flex">
               <div className="flex-2">
                 <div className="border border-black border-solid sm:p-3 px-6 flex">
@@ -55,7 +55,7 @@ export default function Liberty() {
           </div>
           <div className="flex sm:justify-end sm:me-8 mt-6">
             <div className="flex">
-              <h6 className="text-gray-500 font-semibold text-[1.3rem]">From</h6>
+              <h6 className="text-gray-500 font-semibold text-[1rem]">From</h6>
             <h3 className="flex items-center text-[1.4rem] font-semibold">
                <PiCurrencyNgnBold size={25} className="sm:ms-3" />
               123,500 000

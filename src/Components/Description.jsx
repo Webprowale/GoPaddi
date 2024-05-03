@@ -74,7 +74,7 @@ function Description() {
               Close-Up Views of the Statue of Liberty
             </h6>
             <div className="flex mb-3">
-              <IoMdCheckmarkCircle className="text-green-500" />
+              <IoMdCheckmarkCircle size="1.2rem" className="text-green-500" />
 
               <p className="text-dm font-serif">
                 Commentary by an expert guide throughout the cruise, sharing
