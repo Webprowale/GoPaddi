@@ -1,7 +1,7 @@
 import React from "react";
 
-const Itinerary = React.forwardRef((props, ref) => (
-  <div className="container flex flex-col px-3 mt-6 mb-6 pb-6 border-b">
+const Itinerary =React.forwardRef((props, ref) => (
+  <div ref={ref} className="container flex flex-col px-3 mt-6 mb-6 pb-6 border-b">
      <h4 className="font-bold text-[1.7rem] mb-4">Itinerary Breakdown</h4>
     <ol className="relative ms-8 border-s border-gray-500">
       <li className="mb-10  ms-8">

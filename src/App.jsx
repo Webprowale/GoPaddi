@@ -34,7 +34,7 @@ function App() {
     <div className="container-fluid bg-white">
       <Carousel />
       <Liberty />
-      <div className="flex flex-wrap gap-4 ms-2 border-b">
+      <div className="flex flex-wrap gap-4 ms-2 mt-4 border-b">
         <button className="border-0 outline-0 font-bold text-sm text-gray-500 border-b-2 border-blue-600">
           Description
         </button>
