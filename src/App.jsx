@@ -6,11 +6,15 @@ import MeetUP from "./Components/MeetUP";
 import Form from "./Components/Form";
 import Covered from "./Components/Covered";
 import Itinerary from "./Components/Itinerary";
+import Policies from "./Components/Policies";
+import Review from "./Components/Review";
 
 function App() {
   const btnCovered = useRef();
   const btnMeetUp = useRef();
   const btnItinerary = useRef();
+  const btnPolicies = useRef();
+  const btnReview = useRef();
 
   const handleCovered = () => {
     if (btnCovered.current) {
@@ -29,9 +33,19 @@ function App() {
       btnItinerary.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handlePolicies = () => {
+    if (btnPolicies.current) {
+      btnPolicies.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleReview = () => {
+    if (btnPolicies.current) {
+      btnPolicies.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <div className="container-fluid bg-white">
+    <div className="container-fluid w-full bg-white flex flex-col">
       <Carousel />
       <Liberty />
       <div className="flex flex-wrap gap-4 ms-2 mt-4 border-b">
@@ -47,10 +61,10 @@ function App() {
         <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleItinerary}>
           Itinerary Breakdown
         </button>
-        <button className="border-0 outline-0 font-bold text-sm text-gray-500">
+        <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handlePolicies}>
           Policies
         </button>
-        <button className="border-0 outline-0 font-bold text-sm text-gray-500">
+        <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleReview}>
           Reviews
         </button>
         <button className="border-0 outline-0 font-bold text-sm text-gray-500">
@@ -63,10 +77,14 @@ function App() {
           <Covered ref={btnCovered} />
           <MeetUP ref={btnMeetUp} />
           <Itinerary ref={btnItinerary} />
+          <Policies ref={btnPolicies} />
         </div>
         <div className="sm:col-span-5 sm:mx-10 ">
           <Form />
         </div>
+      </div>
+      <div className="mx-0">
+      <Review ref={btnReview} />
       </div>
     </div>
   );
