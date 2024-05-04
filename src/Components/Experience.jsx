@@ -1,19 +1,42 @@
-import React from 'react';
-import Card from './Card';
+import React from "react";
+import Card from "./Card";
+import hero from "../assets/hero.jpg";
 
 const Experience = () => {
   const cards = [
-    { imageUrl: '/assets/hero.jpg', title: 'Noteworthy technology acquisitions 2021', description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.' },
-    { imageUrl: '/assets/hero.jpg', title: 'Another card title', description: 'Description for another card.' },
-    { imageUrl: '/assets/hero.jpg', title: 'Yet another card title', description: 'Description for yet another card.' },
-    { imageUrl: '/assets/hero.jpg', title: 'One more card title', description: 'Description for one more card.' },
+    {
+      imageUrl: hero,
+      title: "Colosseum Underground and Arena Floor Tour",
+      price:
+        "20,000",
+    },
+    {
+      imageUrl: hero,
+      title: "Colosseum Underground and Arena Floor Tour",
+      price: "45,899",
+    },
+    {
+      imageUrl: hero,
+      title: "Colosseum Underground and Arena Floor Tour",
+      price: "14,500",
+    },
+    {
+      imageUrl: hero,
+      title: "Colosseum Underground and Arena Floor Tour",
+      price: "90,000",
+    },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {cards.map((card, index) => (
-        <Card key={index} {...card} />
-      ))}
+    <div className="container-fluid flex flex-col mt-5 mb-3 px-2">
+      <h4 className="font-bold text-[1.7rem] mb-4">
+        Looking for Similar Experiences?
+      </h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+        {cards.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
+      </div>
     </div>
   );
 };
