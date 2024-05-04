@@ -8,6 +8,8 @@ import Covered from "./Components/Covered";
 import Itinerary from "./Components/Itinerary";
 import Policies from "./Components/Policies";
 import Review from "./Components/Review";
+import Faq from "./Components/Faq";
+import Experience from "./Components/Experience";
 
 function App() {
   const btnCovered = useRef();
@@ -15,6 +17,7 @@ function App() {
   const btnItinerary = useRef();
   const btnPolicies = useRef();
   const btnReview = useRef();
+  const btnFaq = useRef();
 
   const handleCovered = () => {
     if (btnCovered.current) {
@@ -43,6 +46,11 @@ function App() {
       btnPolicies.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleFaq = () => {
+    if (btnFaq.current) {
+      btnFaq.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="container-fluid w-full bg-white flex flex-col">
@@ -67,7 +75,7 @@ function App() {
         <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleReview}>
           Reviews
         </button>
-        <button className="border-0 outline-0 font-bold text-sm text-gray-500">
+        <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleFaq}>
           FQAs
         </button>
       </div>
@@ -85,6 +93,8 @@ function App() {
       </div>
       <div className="mx-0">
       <Review ref={btnReview} />
+      <Faq ref={btnFaq} />
+      <Experience />
       </div>
     </div>
   );
