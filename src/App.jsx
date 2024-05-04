@@ -5,10 +5,12 @@ import Description from "./Components/Description";
 import MeetUP from "./Components/MeetUP";
 import Form from "./Components/Form";
 import Covered from "./Components/Covered";
+import Itinerary from "./Components/Itinerary";
 
 function App() {
   const btnCovered = useRef();
   const btnMeetUp = useRef();
+  const btnItinerary = useRef();
 
   const handleCovered = () => {
     if (btnCovered.current) {
@@ -19,6 +21,12 @@ function App() {
   const handleMeetUp = () => {
     if (btnMeetUp.current) {
       btnMeetUp.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleItinerary = () => {
+    if (btnItinerary.current) {
+      btnItinerary.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -36,8 +44,8 @@ function App() {
         <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleMeetUp}>
           Meeting Up
         </button>
-        <button className="border-0 outline-0 font-bold text-sm text-gray-500">
-          Iterlity Breakdown
+        <button className="border-0 outline-0 font-bold text-sm text-gray-500" onClick={handleItinerary}>
+          Itinerary Breakdown
         </button>
         <button className="border-0 outline-0 font-bold text-sm text-gray-500">
           Policies
@@ -54,6 +62,7 @@ function App() {
           <Description />
           <Covered ref={btnCovered} />
           <MeetUP ref={btnMeetUp} />
+          <Itinerary ref={btnItinerary} />
         </div>
         <div className="sm:col-span-5 sm:mx-10 ">
           <Form />
